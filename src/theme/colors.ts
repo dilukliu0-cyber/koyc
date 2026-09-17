@@ -1,0 +1,45 @@
+export const colors = {
+  bg: '#0B0F14',
+  bgElevated: '#121821',
+  bgCard: '#161D27',
+  border: '#243041',
+  borderSoft: '#1C2533',
+  text: '#F2F5F8',
+  textSecondary: '#A8B3C2',
+  textMuted: '#6B7788',
+  accent: '#6C8CFF',
+  accentSoft: '#2A3A6B',
+  accentText: '#E8EEFF',
+  success: '#3DDC97',
+  successSoft: '#163A2C',
+  warning: '#F5C542',
+  danger: '#FF6B7A',
+  hard: '#FF8A65',
+  easy: '#7AD7F0',
+  ok: '#A78BFA',
+  today: '#6C8CFF',
+  calendarDone: '#3DDC97',
+  calendarMiss: '#FF6B7A',
+  calendarEmpty: '#243041',
+  inputBg: '#0F141C',
+  tabBar: '#0D1218',
+  white: '#FFFFFF',
+  black: '#000000',
+};
+
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+};
+
+export const radius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  full: 999,
+};
