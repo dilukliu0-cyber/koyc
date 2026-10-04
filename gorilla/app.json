@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Gorilla Counter",
+    "slug": "gorilla-counter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": { "supportsTablet": false },
+    "splash": { "backgroundColor": "#07090A" }
+  }
+}
