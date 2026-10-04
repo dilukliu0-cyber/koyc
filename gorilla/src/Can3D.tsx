@@ -202,8 +202,10 @@ export default function Can3D({ count, tapSignal, onPress }: Props) {
       }
       while (minis.length > want) scene.remove(minis.pop()!.g);
       minis.forEach((m, i) => {
-        const x = (i - (want - 1) / 2) * 1.15;
-        m.g.userData.tx = x;
+        // alternate left/right of the main can, rows stepping back
+        const side = i % 2 === 0 ? -1 : 1;
+        m.g.userData.tx = side * 2.2;
+        m.g.userData.tz = -0.8 - Math.floor(i / 2) * 1.4;
       });
     };
 
@@ -265,7 +267,7 @@ export default function Can3D({ count, tapSignal, onPress }: Props) {
         // drop in from above on arrival
         const drop = Math.max(0, 1 - age * 2.2);
         m.g.position.y = -0.9 + 3 * drop * drop;
-        m.g.position.z = -3.2;
+        m.g.position.z = m.g.userData.tz as number;
         m.g.rotation.y = 0.5 + i * 0.4;
         m.g.rotation.z = i % 2 ? 0.05 : -0.05;
       });

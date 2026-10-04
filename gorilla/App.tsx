@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useAudioPlayer } from 'expo-audio';
 import * as Haptics from 'expo-haptics';
 import Can3D from './src/Can3D';
@@ -11,6 +11,14 @@ import { dayKey, loadDrinks, saveDrinks } from './src/data';
 const LIME = '#a8e02a';
 
 export default function App() {
+  return (
+    <SafeAreaProvider>
+      <Main />
+    </SafeAreaProvider>
+  );
+}
+
+function Main() {
   const [drinks, setDrinks] = useState<number[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [tapSignal, setTapSignal] = useState(0);
