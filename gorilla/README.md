@@ -20,3 +20,9 @@ eas build --platform ios --profile production
 eas submit --platform ios --latest         # зальёт в App Store Connect -> TestFlight
 ```
 Bundle ID — `com.dilukliu0.gorillacounter` (app.json), при желании поменяйте на свой.
+
+### Через GitHub Actions
+Workflow `.github/workflows/testflight.yml` (запуск вручную: Actions → TestFlight → Run workflow).
+Нужен секрет репозитория `EXPO_TOKEN` (expo.dev → Account → Access tokens).
+Один раз локально выполните `eas build --platform ios` и войдите в Apple ID — EAS сохранит сертификаты,
+после этого сборки из GitHub идут без интерактива.
