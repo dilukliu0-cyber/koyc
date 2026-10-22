@@ -5,7 +5,13 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
-    "ios": { "supportsTablet": false },
-    "splash": { "backgroundColor": "#07090A" }
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.dilukliu0.gorillacounter",
+      "buildNumber": "1"
+    },
+    "splash": {
+      "backgroundColor": "#07090A"
+    }
   }
 }
